@@ -45,7 +45,13 @@
     function App(){
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        /* State 를 설정하는데 2가지 방법이 있음.
+        *  1. 데이터를 강제로 셋팅하기. ex) setCounter(9507);
+        *  2. 함수를 이용하여 데이터 셋팅하기. ex) setCounter((current) => current + 1);
+        *
+        *  2번째 방법이 더 안전.
+        * */
+        setCounter((current) => current + 1);
       };
       return(
         <div>
